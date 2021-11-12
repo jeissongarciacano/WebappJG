@@ -1,2 +1,23 @@
 {% extends "base.html" %} 
-{% block title %}tri{% endblock %} 
+{% block title %}Area y perimetro de un triangulo{% endblock %} 
+
+{% block content %}
+<h1 align="center">Area y perimetro de un triangulo</h1>
+<form method="POST" align="center">
+    <div class="form-group">
+        <label for="lado1" >Lado 1: </label>
+        <input type="number" class="lado1" id="lado1" name="lado1" placeholder="ingrese la longitud" min="0"/>
+    </div>
+    <div class="form-group">
+        <label for="lado2" >Lado 2: </label>
+        <input type="number" class="lado2" id="lado2" name="lado2" placeholder="ingrese la longitud" min="0"/>
+    </div>
+    <div class="form-group">
+        <label for="lado3" >Lado 3: </label>
+        <input type="number" class="lado3" id="lado3" name="lado3" placeholder="ingrese la longitud" min="0"/>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary" >calcular</button>
+</form>
+
+{% endblock %}

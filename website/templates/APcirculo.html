@@ -1,2 +1,15 @@
 {% extends "base.html" %} 
-{% block title %}cir{% endblock %} 
+{% block title %}Area y perimetro de un circulo{% endblock %} 
+
+{% block content %}
+<h1 align="center">Area y perimetro de un circulo</h1>
+<form method="POST" align="center">
+    <div class="form-group">
+        <label for="radio" >Radio: </label>
+        <input type="number" class="radio" id="radio" name="radio" placeholder="ingrese la longitud" min="0"/>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary" >calcular</button>
+</form>
+
+{% endblock %}

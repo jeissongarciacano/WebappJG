@@ -1,2 +1,19 @@
 {% extends "base.html" %} 
-{% block title %}rect{% endblock %} 
+{% block title %}Area y perimetro de un rectangulo{% endblock %} 
+
+{% block content %}
+<h1 align="center">Area y perimetro de un rectangulo</h1>
+<form method="POST" align="center">
+    <div class="form-group">
+        <label for="ladoa" >Lado a: </label>
+        <input type="number" class="ladoa" id="ladoa" name="ladoa" placeholder="ingrese la longitud" min="0"/>
+    </div>
+    <div class="form-group">
+        <label for="ladob" >Lado b: </label>
+        <input type="number" class="ladob" id="ladob" name="ladob" placeholder="ingrese la longitud" min="0"/>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary" >calcular</button>
+</form>
+
+{% endblock %}
