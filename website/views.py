@@ -1,6 +1,4 @@
-from typing import Text
 from flask import Blueprint, render_template, request, flash
-from math import sqrt, pi
 from website import resource
 
 views = Blueprint('views', __name__)
@@ -101,7 +99,7 @@ def APAPcirculo():
                 text2=  'El radio mide: ' + str(radio) 
                 return render_template("APcirculo.html",titulo=title, texti=text,texti1=text2,resultado=text,result=mensaje,result2=mensaje2)
             else:
-                flash('El radio debe ser positivo', category='error')
+                flash('El radio debe ser mayor a cero', category='error')
         else:
             flash('El espacio no puede estar en blanco', category='error')
     return render_template("APcirculo.html")
