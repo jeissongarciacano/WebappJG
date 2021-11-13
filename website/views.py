@@ -20,7 +20,7 @@ def Fibonacci():
                 text2=  'La cantidad es: ' + str(fibon)
                 return render_template("Fibonacci.html",titulo=title, numeroin=text2,resultado=text,result=mensaje)
             else:
-                flash('Debe ser un numero mayor a cero', category='error')
+                flash('Debe ser un número mayor a cero', category='error')
         else:
             flash('El espacio no puede estar en blanco', category='error')
     return render_template("Fibonacci.html")
@@ -34,10 +34,10 @@ def Factorial():
                 mensaje=factorial(factn)
                 title='____________________________________________________________________________________'
                 text='Resultado:'
-                text2=  'El numero es: ' + str(factn) + '!'
+                text2=  'El número es: ' + str(factn) + '!'
                 return render_template("Factorial.html",titulo=title, numeroin=text2,resultado=text,result=mensaje)
             else:
-                flash('Debe ser un numero mayor o igual a cero', category='error')
+                flash('Debe ser un número mayor o igual a cero', category='error')
         else:
             flash('El espacio no puede estar en blanco', category='error')
     return render_template("Factorial.html")
@@ -51,7 +51,7 @@ def APtriangulo():
             lado3 = int(request.form.get('lado3'))
             if lado1+lado2>lado3 and lado2+lado3>lado1 and lado3+lado1>lado2 and lado1>0 and lado2>0 and lado3>0:  
                 m=APtriangulo(lado1,lado2,lado3)
-                mensaje='Area= ' + str(m[0])
+                mensaje='Área= ' + str(m[0])
                 mensaje2='Perimetro= ' + str(m[1])
                 title='____________________________________________________________________________________'
                 text='Resultado:'
@@ -60,9 +60,9 @@ def APtriangulo():
                 text4=  'El lado 3 mide: ' + str(lado3)
                 return render_template("APtriangulo.html",titulo=title, texti=text,texti1=text2,texti2=text3,texti3=text4,resultado=text,result=mensaje,result2=mensaje2)
             else:
-                flash('El triangulo no existe, la suma de dos de sus lados debe ser mayor que el otro lado', category='error')
+                flash('El triángulo no existe, la suma de dos de sus lados debe ser mayor que el otro lado', category='error')
         else:
-            flash('los espacios no pueden estar en blanco', category='error')
+            flash('Los espacios no pueden estar en blanco', category='error')
     return render_template("APtriangulo.html")
 
 @views.route('/APrectangulo', methods=['GET', 'POST'])
@@ -73,7 +73,7 @@ def APrectangulo():
             ladob = int(request.form.get('ladob'))
             if ladoa>0 and ladob>0:
                 m=APrectangulo(ladoa,ladob)
-                mensaje='Area= ' + str(m[0])
+                mensaje='Área= ' + str(m[0])
                 mensaje2='Perimetro= ' + str(m[1])
                 title='____________________________________________________________________________________'
                 text='Resultado:'
@@ -93,7 +93,7 @@ def APAPcirculo():
             radio = int(request.form.get('radio'))
             if radio>0 and radio>0:
                 m=APcirculo(radio)
-                mensaje='Area= ' + str(m[0])
+                mensaje='Área= ' + str(m[0])
                 mensaje2='Perimetro= ' + str(m[1])
                 title='____________________________________________________________________________________'
                 text='Resultado:'
@@ -121,7 +121,7 @@ def fibonacci(a):
                 array.append(aux)
             return array
     else:
-        flash('Numero negativo o cero', category='error')
+        flash('Número negativo o cero', category='error')
 def factorial(a):
     if a >=0:
         ans = 1
@@ -130,7 +130,7 @@ def factorial(a):
             a -= 1
         return ans
     else:
-        flash('Numero negativo', category='error')
+        flash('Número negativo', category='error')
 def APtriangulo(lado1,lado2,lado3):
     if lado1+lado2>lado3 and lado2+lado3>lado1 and lado3+lado1>lado2 and lado1>0 and lado2>0 and lado3>0:
         s = (lado1+lado2+lado3)/2
@@ -138,7 +138,7 @@ def APtriangulo(lado1,lado2,lado3):
         perimetro=lado1+lado2+lado3
         return area,perimetro
     else:
-        flash('El triangulo no existe, la suma de dos de sus lados debe ser mayor que el otro lado o lado negativo', category='error')
+        flash('El triángulo no existe, la suma de dos de sus lados debe ser mayor que el otro lado o lado negativo', category='error')
 def APcirculo(r):
     if r >= 0:
         area = pi*r*r
