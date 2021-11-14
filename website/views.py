@@ -3,7 +3,7 @@ from website import resource
 
 views = Blueprint('views', __name__)
 
-@views.route('')
+@views.route('/')
 def home():
     return render_template("home.html")
 
